@@ -21,7 +21,7 @@ spec:
       containers:
       - name: invoicing
         image: microservice-istio-invoicing:1
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
 #        livenessProbe:
 #          initialDelaySeconds: 180
 #          httpGet:
@@ -61,7 +61,7 @@ spec:
       containers:
       - name: shipping
         image: microservice-istio-shipping:1
-        imagePullPolicy: Never        
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         resources: {}
@@ -92,7 +92,7 @@ spec:
       containers:
       - name: order
         image: microservice-istio-order:1
-        imagePullPolicy: Never        
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         resources: {}
